@@ -4,13 +4,24 @@
 #  - User/Site policy entry
 #
 ###############################################################################
+body file control {
+
+  inputs => { "services/bh/docker.cf" };
+}
 
 bundle agent main
 # User Defined Service Catalogue
 {
 
+  methods:
+
+      "Keep on Truckin with Docker" -> { "microservices" }
+        usebundle => docker,
+        comment => "All of our microservices run with docker";
+
+      # Alternatively, since that bundle takes no parameters, you could actuate it like so:
+      # "docker";
+
 }
 
-body file control {
-     
-}
+

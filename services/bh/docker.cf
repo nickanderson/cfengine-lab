@@ -1,8 +1,5 @@
-bundle agent docker_autorun
+bundle agent docker
 {
-  meta:
-      "tags" slist => { "autorun" };
-
   packages:
       "docker"
         package_policy => "add",
@@ -10,5 +7,5 @@ bundle agent docker_autorun
 
   services:
       "docker"
-        service_policy => "start",
+        service_policy => "start";
 }
