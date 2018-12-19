@@ -1,0 +1,14 @@
+bundle agent docker_autorun
+{
+  meta:
+      "tags" slist => { "autorun" };
+
+  packages:
+      "docker"
+        package_policy => "add",
+        package_method => alpinelinux;
+
+  services:
+      "docker"
+        service_policy => "start",
+}

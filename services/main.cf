@@ -1,0 +1,16 @@
+###############################################################################
+#
+# bundle agent main
+#  - User/Site policy entry
+#
+###############################################################################
+
+bundle agent main
+# User Defined Service Catalogue
+{
+
+}
+
+body file control {
+     
+}
